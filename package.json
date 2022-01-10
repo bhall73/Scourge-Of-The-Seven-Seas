@@ -1,0 +1,29 @@
+{
+  "name": "Scourge-Of-The-Seven-Seas",
+  "version": "1.0.0",
+  "main": "game.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.4.5",
+    "browser-sync": "^2.27.7",
+    "bulma": "^0.9.3",
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "md5": "^2.3.0"
+  },
+  "scripts": {
+    "client": "npx browser-sync start -sw",
+    "server": "node server.js",
+    "start": "concurrently --kill-others \"npm run client\" \"npm run server\""
+  },
+  "proxy": "http://localhost:8080",
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
